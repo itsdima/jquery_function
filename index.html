@@ -7,32 +7,74 @@
             $('#clickClass').click(function(){
                     $('p.red').css("color", "red");
             });
-
             $('#addClass').click(function(){
-                $('p.highlight').addClass('selected');
-            })
-
+                    $('p.highlight').addClass('selected');
+            }); 
             $('#hide').click(function(){
                 $('p.hideClass').hide();
-            })
+            });
             $('#show').click(function(){
-                $('p.showClass').show('slow');
-                $('p.showClass').hide('slow');
-            })
+               if( $('p.showClass').is(':hidden')){
+                   $('p.showClass').show('slow');
+               }else{$('p.showClass').hide('slow');}
+            });
+            $('#toggle').click(function(){
+                $('p.toggleClass').toggle(); 
+            });
 
-            // $('#slideUpButton').click(function(){
-            //    if ($('p.slideUp').is(":hidden")){
-            //        $('p.slideUp').slideDown();
-            //    }
-            //    else{$('p.slideUp').slideUp();}
-            // });
+            $('#slideDown').click(function(){
+                if($('p.slideDownClass').is(":hidden")){
+                    $('p.slideDownClass').slideDown();
+                }else{$('p.slideDownClass').slideUp();}
+            });
+            $('#slideUp').click(function(){
+                if($('p.slideUpClass').is(":hidden")){
+                    $('p.slideUpClass').slideDown();
+                }else{$('p.slideUpClass').slideUp();}
+            });
+            $('#slideToggle').click(function(){
+                $('p.slideToggleClass').slideToggle('slow'); 
+            });
+            $('#fadeIn').click(function(){
+                $('p.fadeInClass').fadeIn('slow');
+            });
+            $('#fadeIn').click(function(){
+                $('p.fadeInClass').fadeIn('slow');
+            });
+            $('#fadeOut').click(function(){
+                $('p.fadeOutClass').fadeOut('slow');
+            });
+            $('#fadeOut').click(function(){
+                $('p.fadeOutClass').fadeOut('slow');
+            });
+            $('#before').click(function(){
+                $('p.beforeClass').before('<b>BEFORE! </b>');
+            });
+            $('#after').click(function(){
+                $('p.afterClass').after('<b>AFTER! </b>');
+            });
+            $('#append').click(function(){
+                $('p.appendClass').append('<b>SUPERSTAR</b>');
+            });
+            $('#html').click(function(){
+                $('p.htmlClass').html('<span>Hello <b>Again</b></span>');
+            });
+            $('#attr').click(function(){
+                $('p.attrClass').html('class', 'attr-color');
+            });
+            $("#val").click(function(){
+                $('input.val').val('DONE!');
+            });
+            $("#text").click(function(){
+                $('p.textClass').text('You just made a jQuery .text');
+            });
+            $("#data").click(function(){
+                $('.message').data('text','Welcome to jQuery');
+            });
+            $("button.datatwo").click(function(){
+                alert($('.message').data('text'));
+            });
 
-
-            // $('#addClass').click(function(){
-            //   $('p.highlight').addClass();
-            // });
-            // $('').click(function(){
-            //   $('p.highlight').addClass();
 
             });
 	</script>
@@ -43,26 +85,99 @@
     <body>
 
         <div id="main-container">
-            <div class="addClass">
+            <div class="jQuery_func">
                 <h1>.click()</h1>
                 <button id="clickClass" class="button-design"type="button" >AddClass</button>
                 <p class="red">Bind an event handler to the “click” JavaScript event, or trigger that event on an element.</p>
             </div>
-            <div class="addClass">
-                <h1>Add Class</h1>
+            <div class="jQuery_func">
+                <h1>.addClass()</h1>
                 <button id="addClass" class="button-design"type="button" >AddClass</button>
                 <p class="highlight">Adds the specified class(es) to each element in the set of matched elements.</p>
             </div>
-            <div class="addClass">
+            <div class="jQuery_func">
                 <h1>.hide()</h1>
                 <button id="hide" class="button-design"type="button" >AddClass</button>
                 <p class="hideClass">Hide the matched elements.</p>
             </div>
-             <div class="addClass">
+             <div class="jQuery_func">
                 <h1>.show()</h1>
                 <button id="show" class="button-design"type="button" >AddClass</button>
                 <p class="showClass">Display the matched elements.</p>
             </div>
+             <div class="jQuery_func">
+                <h1>.toggle()</h1>
+                <button id="toggle" class="button-design"type="button" >AddClass</button>
+                <p class="toggleClass">Display the matched elements.</p>
+                <p class="toggleClass" style="display: none;">Hide the matched elements.</p>
+            </div>
+            <div class="jQuery_func">
+                <h1>.slideDown()</h1>
+                <button id="slideDown" class="button-design"type="button" >AddClass</button>
+                <p class="slideDownClass">Display the matched elements with a sliding motion.</p>
+            </div>
+            <div class="jQuery_func">
+                    <h1>.slideUp()</h1>
+                    <button id="slideUp" class="button-design"type="button" >AddClass</button>
+                    <p class="slideUpClass">Hide the matched elements with a sliding motion.</p>
+                </div>
+             <div class="jQuery_func">
+                    <h1>.slideToggle()</h1>
+                    <button id="slideToggle" class="button-design"type="button" >AddClass</button>
+                    <p class="slideToggleClass">Display or hide the matched elements with a sliding motion.</p>
+                </div>
+            <div class="jQuery_func">
+                    <h1>.fadeIn()</h1>
+                    <button id="fadeIn" class="button-design"type="button" >AddClass</button>
+                    <p class="fadeInClass">Display the matched elements by fading them to opaque.</p>
+                </div>
+            <div class="jQuery_func">
+                    <h1>.fadeOut()</h1>
+                    <button id="fadeOut" class="button-design"type="button" >AddClass</button>
+                    <p class="fadeOutClass">Hide the matched elements by fading them to transparent.</p>
+                </div>
+            <div class="jQuery_func">
+                    <h1>.before()</h1>
+                    <button id="before" class="button-design"type="button" >AddClass</button>
+                    <p class="beforeClass">Insert content:</p>
+                </div>
+                <div class="jQuery_func">
+                    <h1>.after()</h1>
+                    <button id="after" class="button-design"type="button" >AddClass</button>
+                    <p class="afterClass">Insert content:</p>
+                </div>
+                <div class="jQuery_func">
+                    <h1>.append()</h1>
+                    <button id="append" class="button-design"type="button" >AddClass</button>
+                    <p class="appendClass">Insert content: </p>
+                </div>
+                <div class="jQuery_func">
+                    <h1>.html()</h1>
+                    <button id="html" class="button-design"type="button" >AddClass</button>
+                    <p class="htmlClass">Insert content: </p>
+                </div>
+                <div class="jQuery_func">
+                    <h1>.attr()</h1>
+                    <button id="attr" class="button-design"type="button" >AddClass</button>
+                    <p class="attrClass">Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element. </p>
+                </div>
+                 <div class="jQuery_func">
+                    <h1>.val()</h1>
+                    <button id="val" class="button-design"type="button" >Click for Value</button>
+                    <input class="val" value="Submit">
+                </div>
+                <div class="jQuery_func">
+                    <h1>.text()</h1>
+                    <button id="text" class="button-design"type="button" >Click for Value</button>
+                    <p class="textClass">Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element. </p>
+                </div>
+                <div class="jQuery_func">
+                    <h1>.data()</h1>
+                    <button id="data" class="button-design"type="button" >Click for Value</button>
+                    <p class="dataClass">Get the value of an attribute for the first element in the set of matched elements or set one or more attributes for every matched element. </p>
+                    <button class="datatwo"> Click to Retrieve</button>
+                    <div class="message"></div>
+                </div>         
             
 
         </div>

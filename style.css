@@ -15,10 +15,10 @@ body{
     margin-right: auto;
 
 }
-.addClass{
+.jQuery_func{
     width: 455px;
     margin: 10px;
-    height: 80px;
+    height: 150px;
     margin-top: 10px;
     border-top: 4px solid grey;
     display: inline-block;
@@ -53,5 +53,26 @@ p{
 }
 .selected{
     background-color: lightcoral;
-    color: rgb(71, 4, 4);
+    color: darkgrey;
+}
+.toggleClasstwo{
+    display: none;
+}
+.attr-color{
+    color: blue;
+    font-weight: 700;
+}
+input{
+    margin-top: 5px;
+    margin-left: 50px;
+    width: 300px;
+    display: inline-block;
+}
+
+.valClass{
+    display: inline-block;
+}
+#val{
+    margin-top: 20px;
+    margin-left:50px;
 }
